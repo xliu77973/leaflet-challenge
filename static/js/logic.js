@@ -90,7 +90,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   
   // OPTIONAL: Step 2
   // Add the data to the earthquake layer instead of directly to the map.
-  }).addTo(map);
+  earthquakes.addTo(map);
 
   // Create a legend control object.
   let legend = L.control({
@@ -119,21 +119,22 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     // Loop through our depth intervals to generate a label with a colored square for each interval.
 
 
-    return div;
+    // return div;
 
   // Finally, add the legend to the map.
   legend.addTo(map);
 
   // OPTIONAL: Step 2
   // Make a request to get our Tectonic Plate geoJSON data.
-  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function (plate_data) {
-    // Save the geoJSON data, along with style information, to the tectonic_plates layer.
-    L.geoJson(plateData, {
-      color: "orange",
-      weight: 2
-    }).addTo(tectonicPlates);
+  // // d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function (plate_data) {
+  // //   Save the geoJSON data, along with style information, to the tectonic_plates layer.
+  // //   L.geoJson(plateData, {
+  //     color: "orange",
+  //     weight: 2
+  //   }).addTo(tectonicPlates);
 
-    tectonicPlates.addTo(map);
-  });
+  //   tectonicPlates.addTo(map);
+  // });
 
     // Then add the tectonic_plates layer to the map.
+});
